@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+
+h2 {
+    color: whitesmoke !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 50px;
+    margin-left: 80px;
+}
+
+.pb-30{
+  padding-bottom: 30%;
+}
+
+.counter_box {
+    width: 460px;
+    height: 360px;
+    border-radius: 20px;
+    background: black;
+    box-shadow: 0px 10px 30px -10px #128DFF;
+    position: absolute;
+    left: 35%;
+    padding: 40px;
+    border: 2px solid #128DFF;
+
+}
+.w_30{
+    max-width: 50px;
+}
+
+.number {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 60px;
+
+}
+.previous {
+    color: white;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.add-savebtn {
+    margin: 36px 0;
+}
+
+.counter_btn {
+    min-width: 138px;
+    min-height: 45px;
+    padding: 13px 35px;
+    border-radius: 4px;
+    border: 1px solid #128DFF;
+    color:  #128DFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: black;
+}
+
+button:hover {
+    background: linear-gradient(138deg, #128DFF 0%, #1444EF 100%);
+    color: black;
+}
+.bg-color {
+    background: #555 !important;
+}
+.notallow {
+    cursor: not-allowed !important;
+    width: 100px;
+    height: 50px;
+}

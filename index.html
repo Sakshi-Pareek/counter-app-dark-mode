@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class=" bg-color">
+        <div class="min-vh-100 d-flex flex-column">
+            <div class="d-flex justify-content-end">
+             <a href="" class=""><img src="./assets/images/png/dark-mode.svg" alt="dark" class="w_30 me-3 pt-3"></a>
+            </div>
+            <div class="flex-grow-1 d-flex justify-content-center align-items-center flex-column">
+                <h2 class="text-center pb-30">Advance Counter app</h2>
+                <div class="counter_box d-flex flex-column justify-content-center align-items-center">
+                    <p class="number">0</p>
+                    <div class="add-savebtn">
+                        <button class="add counter_btn">Add One</button>
+                        <button class="save counter_btn">Save</button>
+                    </div>
+                    <h4 class="previous">Previous Values</h4>
+                    <p class=" savetext mt-3 previous">0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <script>
+        let number = document.querySelector(".number");
+        let savetext = document.querySelector(".savetext");
+        
+        let add = document.querySelector(".add");
+        let save = document.querySelector(".save");
+
+
+        add.addEventListener("click", function () {
+            number.innerHTML = +number.innerHTML + 1;
+            save.classList.replace("notallow", "save");
+        });
+
+        save.addEventListener("click", function () {
+            if (number.innerHTML == 0) {
+                alert("please enter number")
+                save.classList.replace("save", "notallow");
+            } else {
+                if (savetext.innerHTML == 0) {
+                    savetext.innerHTML = number.innerHTML;
+                } else {
+                    savetext.innerHTML += " , " + number.innerHTML;
+                }
+                number.innerHTML = 0;
+            }
+        });
+    </script>
+</body>
+
+</html>
